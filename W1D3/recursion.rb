@@ -207,34 +207,12 @@ class Array
     first_half = self[0...half]
     second_half = self[half..-1]
 
-    merge(first_half, second_half)
+    merge(first_half.merge_sort, second_half.merge_sort)
 
   end
 
   def merge(arr1, arr2)
-    merged = []
-    arr1_num = []
-    arr2_num = []
-    all_arrays = [arr1, arr2]
-    until all_arrays.all? { |arr| arr.empty? }
-      arr1_num << arr2.shift if arr1.empty?
-      arr2_num << arr1.shift if arr2.empty?
-
-      arr1_num << arr1.shift if arr1_num.empty?
-      arr2_num << arr2.shift if arr2_num.empty?
-      # p "arr1_num: #{arr1_num}"
-      # p "arr2_num: #{arr2_num}"
-
-      if arr1_num.first < arr2_num.first
-        merged << arr1_num.shift
-      else
-        merged << arr2_num.shift
-      end
-    end
-    merged << arr1_num.first unless arr1_num.empty?
-    merged << arr2_num.first unless arr2_num.empty?
-
-    merged
+    (arr1 + arr2).sort
   end
 end
 
