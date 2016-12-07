@@ -1,22 +1,7 @@
 Rails.application.routes.draw do
 
-  # resources :users
-  get 'users' => 'user#index', :as => 'users'
-  post 'users' => 'user#create'
-  get 'users/new' => 'user#new', :as => 'new_user'
-  get 'users/:id/edit' => 'user#edit', :as => 'edit_user'
-  get 'users/:id' => 'user#show', :as => 'user'
-  patch 'users/:id' => 'user#update'
-  put 'users/:id' => 'user#update'
-  delete 'users/:id' => 'user#destroy'
-
-  resources :contacts do
-    
-  end
-
-  resources :contact_shares, only: [:create, :destroy]
-  # get '/users/:user_id/contacts' => 'contacts#index'
-
+  resources :cats
+  resources :cat_rental_requests
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
