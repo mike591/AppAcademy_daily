@@ -1,0 +1,13 @@
+<h1>Log In!</h1>
+<form action="/sessions" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input id="username" type="text" name="user[user_name]">
+  <br><br>
+  <label for="pass">Password: </label>
+  <input id="pass" type="password" name="user[password]">
+  <br><br>
+  <input type="submit" value="Get Renting">
+</form>
+<br>
+<%= link_to "Make new user", new_user_url %>
