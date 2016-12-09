@@ -1,0 +1,7 @@
+<h1> Track: <%= @track.name %> </h1>
+<p>Track type: <%= @track.track_type %></p>
+<p>Track lyrics: <%= @track.lyrics %></p>
+<br><br>
+<%= button_to "edit track", edit_track_url, method: :get %><br>
+<%= button_to "delete track", track_url, method: :delete %><br>
+<%= button_to "back", album_url(@track.album_id), method: :get %>

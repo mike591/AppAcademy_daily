@@ -1,0 +1,18 @@
+<h1> <%= @album.name %>'s page </h1>
+
+<p> Album type: <%= @album.album_type %> </p>
+
+<h2>Tracks:</h2>
+<ul>
+  <% @album.tracks.each do |track| %>
+    <li> <%= link_to track.name, track_url(track)  %> </li>
+  <% end %>
+</ul>
+<%= link_to "Create new track", new_track_url %>
+<br><br>
+
+<%= button_to "Edit album", edit_album_url(@album), method: :get %>
+<br>
+<%= button_to "Delete album", album_url(@album), method: :delete %>
+
+<p> <%= link_to "Back", band_url(@album.band_id) %> </p>
