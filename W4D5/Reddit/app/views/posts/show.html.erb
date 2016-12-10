@@ -1,0 +1,26 @@
+<%= link_to @post.title, @post.url || post_url(@post)  %> by <%= @post.author.username %>
+
+<% if @post.content && !@post.content.empty? %>
+<h3>Content</h3>
+<pre>
+  <%= @post.content %>
+</pre>
+<% end %>
+
+<h3>Subs</h3>
+<ul>
+  <% @post.subs.each do |sub| %>
+    <li><%= link_to sub.title, sub_url(sub) %></li>
+  <% end %>
+</ul>
+
+<h2>Comments</h2>
+<%= link_to "Comment on this post!", new_post_comment_url(@post) %>
+
+<% @all_comments.each do |comment| %>
+  <%= render 'comments/comment', comment: comment, comments_by_parent_id: @comments_by_parent_id if comment.parent_comment_id.nil? %>
+<% end %>
+
+
+<br><br>
+<%= link_to "Edit", edit_post_url(@post) %>
