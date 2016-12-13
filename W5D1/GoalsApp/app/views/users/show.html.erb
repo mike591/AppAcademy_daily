@@ -1,0 +1,12 @@
+<h1><%= @user.username %></h1>
+
+<h3>Current Goal</h3>
+<% @user.goals.each do |goal| %>
+  <% unless current_user.id != @user.id || !goal.visibility.nil? %>
+    <%= link_to goal.title, goal_url(goal) %><br>
+  <% end %>
+<% end %>
+<br><br>
+<% if current_user.id == @user.id %>
+  <%= link_to "New Goal", new_goal_url %>
+<% end %>

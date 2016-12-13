@@ -1,0 +1,4 @@
+<h1>Your Goals</h1>
+<% @goals.each do |goal| %>
+  <%= link_to goal.title, goal_url(goal) %><br>
+<% end %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GoalsApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <% if current_user %>
+    Current User: <%= current_user.username %><br>
+  <% end %>
+
+<% if logged_in? %>
+  <%= button_to "Logout", "/session", method: :delete %>
+<% end %>
+
+<% flash.each do |name, message|%>
+  <%= message %><br>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
