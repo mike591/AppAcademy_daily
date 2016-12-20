@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+}
+
+ul {
+  height: 120px;
+  display: inline;
+  float: left;
+  border-bottom: 5px solid black;
+  padding: 0;
+  margin: 50px;
+}
+
+ul:hover {
+  border-color: blue;
+}
+
+li {
+  width: 100px;
+  height: 30px;
+  list-style: none;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.three {
+  width: 90px;
+  border: 5px solid black;
+  background-color: green;
+  text-align: center;
+}
+
+.two {
+  width: 60px;
+  border: 5px solid black;
+  background-color: green;
+}
+
+.one {
+  width: 40px;
+  border: 5px solid black;
+  background-color: green;
+}

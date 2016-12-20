@@ -1,0 +1,31 @@
+li {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  float: left;
+  border: 5px solid black;
+  list-style: none;
+}
+
+li:hover {
+  background-color: yellow;
+}
+
+ul {
+  width: 330px;
+}
+
+.square {
+  font-size: 70px;
+  text-align: center;
+}
+
+.x {
+  background-color: white;
+  color: blue;
+}
+
+.o {
+  background-color: white;
+  color: red;
+}
