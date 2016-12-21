@@ -1,0 +1,125 @@
+.main-content {
+  position: relative;
+  padding-top: 25px;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.main-content header {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+
+.main-content header:hover {
+  text-decoration: underline;
+}
+
+.main-content iframe{
+  min-width: 95%;
+  min-height: 100%;
+  width: auto;
+  height: 400px;
+  overflow: hidden;
+  padding-left: 5px;
+}
+
+.main-content comment{
+  position: relative;
+  display: block;
+}
+
+.main-content comment a{
+  position: absolute;
+  top: 10px;
+  color: $blue;
+}
+
+.main-content comment:hover {
+  text-decoration: underline;
+}
+
+.main-content header h1 {
+  font-size: 25px;
+  font-style: italic;
+  line-height: normal;
+}
+
+.main-content h2 {
+  color: $gray;
+  padding-bottom: 5px;
+  padding-right: 52px;
+}
+
+.main-content ul {
+  list-style: disc;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.left-panel li {
+  padding-top: 15px;
+}
+
+warning {
+  display: block;
+  padding: 10px 15px;
+}
+
+.articles li {
+  list-style: none;
+  padding-bottom: 10px;
+  border-top: 1px solid $light-gray;
+}
+
+.main-content img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.thumbnail {
+  height: 100px;
+}
+
+.opinions {
+  font-weight: bold;
+}
+
+.title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  // padding: 5px 0px;
+  margin: 0;
+}
+
+form > input[type="text"] {
+  flex: 1;
+  border: 1px solid $gray;
+  border-right: none;
+  padding-left: 5px;
+  color: $gray;
+}
+
+form > input[type="submit"] {
+  // border: 1px solid $blue;
+}
+
+form > button {
+  border-radius: 0;
+}
+
+// .hr-top:after {
+//   padding-top: 5px;
+//   display: block;
+//   content: "";
+//   clear: both;
+//   border-bottom: 1px solid $gray;
+//   box-shadow: 0 1px 2px $gray;
+// }
